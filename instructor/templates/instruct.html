@@ -1,11 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  <style>
+
+  	input, select {
+  					width: 100%;
+  					padding: 12px 20px;
+  					margin: 8px 0;
+  					display: inline-block;
+  					border: 1px solid #ccc;
+  					border-radius: 4px;
+  					box-sizing: border-box;
+  					background-color:hsla(120,100%,60%,0.3); 
+				  }
+
+	form{
+		border-style:outset;
+		margin-top: 5em;
+		margin-bottom:5em;
+		margin-left: 10em;
+	}
+	.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: hsla(240,100%,50%,0.6);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 11em;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+label
+{	margin:10px;
+	font-size: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
 <div class="contact-page">
 	<div class="form">
-	<form method = "POST" >
+	 <div class="col-sm-10">
+	<form class="form-horizontal " method = "POST" >
 		{% csrf_token %}
 		{{form.as_p}}
-		<button type="submit"> SEND </button>
+		<button type="submit" class="button" style="vertical-align:middle"> 
+			<span>SEND	</span> 
+	    </button>
 	</form>
+	</div>
 		</div>
+</div>
+
 </div>
 
 
