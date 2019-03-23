@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+	
+	{% block head %}
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/style.css' %}">
+	<title>Enter your Profile Here!</title>
+	{% endblock %}
+	
+
+	{% block body %}
+	<div class="container">
+		<h1>Welcome</h1>
+	
+<h1>Hi {{ myName }}</h1>
+<ul>
+	{% for number in myNumbers %}
+	<li>{{ number}} </li>
+	{% endfor %}
+</ul>
+</div>
+{% endblock %}
